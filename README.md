@@ -80,7 +80,7 @@ pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tessera
 
 *   This script is designed for Windows only due to its use of `ctypes` and `windll` for window transparency.
 *   For best results, run your game in **Windowed** or **Borderless Window** mode. The overlay may not appear in fullscreen mode.
-*   I didn't check the detection accurately enough. Mistakes are possible. Ideally, check the parameters during the analysis.
+*   I didn't check the detection accurately enough. Mistakes are possible. Ideally, check and compare the seeds parameters during the analysis.
 It is best to build your own model for tesseract https://github.com/ignwombat/tesseract-custom-font
 
 ## 🤝 Author
