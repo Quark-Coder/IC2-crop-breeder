@@ -248,11 +248,19 @@ def analyze_seeds():
     if green_seeds_objects:
         min_gr = min(green_seeds_objects, key=lambda s: s['Gr'])
         max_gr = max(green_seeds_objects, key=lambda s: s['Gr'])
+        
+        min_ga = min(green_seeds_objects, key=lambda s: s['Ga'])
+        max_ga = max(green_seeds_objects, key=lambda s: s['Ga'])
+        
         min_re = min(green_seeds_objects, key=lambda s: s['Re'])
         max_re = max(green_seeds_objects, key=lambda s: s['Re'])
+        
         print(f"🌱 Growth: {min_gr['Gr']} .. {max_gr['Gr']}")
+        print(f"⚡ Gain:   {min_ga['Ga']} .. {max_ga['Ga']}")
         print(f"🛡️ Resist: {min_re['Re']} .. {max_re['Re']}")
+        
     print("="*40 + "\n")
+
 
 def reset_all():
     global scanned_seeds, current_page, max_page, seed_colors
@@ -355,3 +363,4 @@ if __name__ == "__main__":
     keyboard.add_hotkey('left', lambda: switch_page(current_page - 1))
     keyboard.add_hotkey('right', lambda: switch_page(current_page + 1))
     keyboard.wait()
+
